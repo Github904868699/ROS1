@@ -1,3 +1,10 @@
+## Web UI
+Launch the simple control page:
+
+    rosrun webui webui_node.py
+
+Access http://<IP>:5000/ from your network browser to control the real robot or Gazebo.
+
 # This file currently only serves to mark the location of a catkin workspace for tool integration
 ros 下机器人工作空间：roboarm3_ws： 中
 文件夹（1）build和devel由编译生成
