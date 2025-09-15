@@ -3,11 +3,9 @@ Launch the control page:
 
     rosrun webui webui_node.py
 
-Access `http://<IP>:5000/` from your network browser. The page provides
-buttons for basic velocity commands and forms to send Cartesian
-positions (x/y/z and roll/pitch/yaw) for both the real robot and the
-Gazebo simulation. The simulation section now publishes to the standard
-`/cmd_vel` topic so the virtual robot responds to web commands.
+Access `http://<IP>:5000/` from your network browser. The page offers
+buttons labelled X±/Y±/Z± that increment the target position along each
+axis for both the real robot and the Gazebo simulation.
 
 # This file currently only serves to mark the location of a catkin workspace for tool integration
 ros 下机器人工作空间：roboarm3_ws： 中
