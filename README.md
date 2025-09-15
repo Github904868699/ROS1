@@ -1,3 +1,20 @@
+## Web UI
+Launch the control page:
+
+    rosrun webui webui_node.py
+
+Access `http://<IP>:5000/` from your network browser. The page offers
+buttons labelled X±/Y±/Z± that increment the target position along each
+axis for both the real robot and the Gazebo simulation.
+
+Run the MoveIt subscriber so the arm follows the commands:
+
+    rosrun webui pose_listener.py [_move_group:=<group_name>]
+
+The node defaults to the `arm` MoveIt planning group used in this workspace.
+If your robot uses a different group name, set the `~move_group` parameter as
+shown above.
+
 # This file currently only serves to mark the location of a catkin workspace for tool integration
 ros 下机器人工作空间：roboarm3_ws： 中
 文件夹（1）build和devel由编译生成

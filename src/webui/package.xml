@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>webui</name>
+  <version>0.0.1</version>
+  <description>Simple web interface to control robot via HTTP.</description>
+  <maintainer email="user@example.com">Your Name</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>geometry_msgs</depend>
+  <exec_depend>python3-flask</exec_depend>
+  <exec_depend>moveit_commander</exec_depend>
+</package>
