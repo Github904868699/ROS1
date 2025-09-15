@@ -5,5 +5,5 @@ find_package(catkin REQUIRED COMPONENTS rospy geometry_msgs)
 
 catkin_package()
 
-catkin_install_python(PROGRAMS scripts/webui_node.py
+catkin_install_python(PROGRAMS scripts/webui_node.py scripts/pose_listener.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

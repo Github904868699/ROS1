@@ -7,6 +7,10 @@ Access `http://<IP>:5000/` from your network browser. The page offers
 buttons labelled X±/Y±/Z± that increment the target position along each
 axis for both the real robot and the Gazebo simulation.
 
+Run the MoveIt subscriber so the arm follows the commands:
+
+    rosrun webui pose_listener.py
+
 # This file currently only serves to mark the location of a catkin workspace for tool integration
 ros 下机器人工作空间：roboarm3_ws： 中
 文件夹（1）build和devel由编译生成
