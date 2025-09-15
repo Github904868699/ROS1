@@ -3,9 +3,11 @@ Launch the control page:
 
     rosrun webui webui_node.py
 
-Access `http://<IP>:5000/` from your network browser. The page offers
-buttons labelled X±/Y±/Z± that increment the target position along each
-axis for both the real robot and the Gazebo simulation.
+Access `http://<IP>:5000/` from your network browser.  Each button
+uses JavaScript to send an asynchronous request so the page no longer
+reloads or times out.  The X±/Y±/Z± buttons increment the target
+position along each axis for both the real robot and the Gazebo
+simulation.
 
 Run the MoveIt subscriber so the arm follows the commands:
 
