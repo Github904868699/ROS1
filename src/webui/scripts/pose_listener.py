@@ -9,7 +9,12 @@ import moveit_commander
 class PoseListener:
     def __init__(self):
         moveit_commander.roscpp_initialize([])
-        self.group = moveit_commander.MoveGroupCommander('manipulator')
+        group_name = rospy.get_param('~move_group', 'manipulator')
+        try:
+            self.group = moveit_commander.MoveGroupCommander(group_name)
+        except RuntimeError as exc:
+            rospy.logfatal("Planning group '%s' not found: %s", group_name, exc)
+            raise
         rospy.Subscriber('/target_pose', PoseStamped, self._cb)
         rospy.Subscriber('/gazebo/target_pose', PoseStamped, self._cb)
 

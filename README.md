@@ -9,7 +9,11 @@ axis for both the real robot and the Gazebo simulation.
 
 Run the MoveIt subscriber so the arm follows the commands:
 
-    rosrun webui pose_listener.py
+    rosrun webui pose_listener.py [_move_group:=<group_name>]
+
+By default the node uses the `manipulator` MoveIt planning group. If your
+robot uses a different group name, set the `~move_group` parameter as shown
+above.
 
 # This file currently only serves to mark the location of a catkin workspace for tool integration
 ros 下机器人工作空间：roboarm3_ws： 中
